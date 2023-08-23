@@ -25,7 +25,7 @@ function App() {
       <Possiblity />
       <Cta />
       <Blog />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
