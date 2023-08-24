@@ -1,7 +1,28 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { RiMenu3line, RiClodeLin } from "react-icons/ri";
+import { RiMenu2Line, RiCloseLine } from "react-icons/ri";
 import logo from "../../assets/logo.svg";
+
+const Menu = () => (
+  <>
+    <p>
+      <a href="#home"> Home </a>
+    </p>
+    <p>
+      <a href="#wgpt"> What is GPT3</a>
+    </p>
+    <p>
+      <a href="#possibility"> Open AI </a>
+    </p>
+    <p>
+      <a href="#fetures"> Case Studies</a>
+    </p>
+    <p>
+      <a href="#blog"> Library</a>
+    </p>
+  </>
+);
+
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
@@ -10,21 +31,7 @@ const Navbar = () => {
         <div className="gpt__navbar-links_logo">
           <img src={logo} alt="logo" />
           <div className="gpt__navbar-links_container">
-            <p>
-              <a href="#home"> Home </a>
-            </p>
-            <p>
-              <a href="#wgpt"> What is GPT3</a>
-            </p>
-            <p>
-              <a href="#possibility"> Open AI </a>
-            </p>
-            <p>
-              <a href="#fetures"> Case Studies</a>
-            </p>
-            <p>
-              <a href="#blog"> Library</a>
-            </p>
+            <Menu />
           </div>
         </div>
       </div>
@@ -33,9 +40,30 @@ const Navbar = () => {
         <button type="button">Sign up</button>
       </div>
       <div className="gpt__navbar-menu">
-      {toggleMenu ? <RiClodeLin/> onClick={}
-      :
-      }
+        {toggleMenu ? (
+          <RiCloseLine
+            color="#fff"
+            size={27}
+            onClick={() => setToggleMenu(false)}
+          />
+        ) : (
+          <RiMenu2Line
+            color="#fff"
+            size={27}
+            onClick={() => setToggleMenu(true)}
+          />
+        )}
+        {toggleMenu && (
+          <div className="gpt__navbar-menu_container scale-up-center">
+            <div className="gpt__navbar-menu_container-links">
+              <Menu />
+              <div className="gpt__navbar-menu_container-links_sign">
+                <p>Sign in</p>
+                <button type="button">Sign up</button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
