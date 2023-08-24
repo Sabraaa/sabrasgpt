@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.scss";
+import "./App.css";
 import Article from "./components/article/Article";
 import Brand from "./components/brand/Brand";
 import Cta from "./components/cta/Cta";
@@ -25,7 +25,7 @@ function App() {
       <Possiblity />
       <Cta />
       <Blog />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
