@@ -1,9 +1,8 @@
-.gpt__feature-container__feature{
+.gpt__features-container__feature{
 width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: flex-start;
-flex-direction: column;
 margin: 1rem;
 }
 .gpt__feature-container__feature-title div{
