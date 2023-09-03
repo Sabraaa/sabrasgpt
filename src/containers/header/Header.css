@@ -1,5 +1,8 @@
 .gpt__header {
     display: flex;
+
+
+    
 }
 .gpt__header-content{
 flex: 2;
