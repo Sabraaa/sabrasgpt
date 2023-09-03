@@ -1,8 +1,5 @@
-.gpt__header-wrapper {
+.gpt__header {
     display: flex !important;
-
-
-
 }
 .gpt__header-content{
 flex: 2;
@@ -106,6 +103,7 @@ height: 38px;
 @media screen and (max-width:1050px) {
     .gpt__header{
         flex-direction: column;
+        
     }
     .gpt__header-content{
         margin: 0 0 3rem;
